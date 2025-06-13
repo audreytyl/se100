@@ -270,27 +270,32 @@
 // 	price: 171.48,
 // }
 
-const url = "https://jsonplaceholder.typicode.com/posts";
-const payload = {
-    ticker: 'APPL',
-    name: 'Apple Inc',
-    price: 171.48,
-};
+// const url = "https://jsonplaceholder.typicode.com/posts";
+// const payload = {
+//     ticker: 'APPL',
+//     name: 'Apple Inc',
+//     price: 171.48,
+// };
 
-fetch(url, {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(payload),
-})  
+// fetch(url, {
+//     method: 'POST',
+//     headers: {
+//         'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(payload),
+// })  
 
-.then((response) => {
-   return response.json();
+// .then((response) => {
+//    return response.json();
+// })
+// .then((data) => {
+//     console.log('Response from server:', data);
+// }) 
+
+
+
+const p = Promise.reject(new Error('Invalid id'));
+
+p.catch((error) =>{
+    console.error(error);
 })
-.then((data) => {
-    console.log('Response from server:', data);
-}) 
-
-
-
